@@ -61,6 +61,7 @@ func main() {
 			&cli.BoolFlag{
 				Name:    "autoload-galleries",
 				EnvVars: []string{"AUTOLOAD_GALLERIES"},
+				Category: "galleries",
 			},
 			&cli.BoolFlag{
 				Name:    "debug",
@@ -100,6 +101,7 @@ func main() {
 				Name:    "galleries",
 				Usage:   "JSON list of galleries",
 				EnvVars: []string{"GALLERIES"},
+				Category: "galleries",
 			},
 			&cli.StringFlag{
 				Name:    "remote-library",

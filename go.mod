@@ -168,3 +168,19 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/tools v0.19.0 // indirect
 )
+
+replace github.com/donomii/go-rwkv.cpp => /home/teto/LocalAI/sources/go-rwkv
+
+replace github.com/ggerganov/whisper.cpp => /home/teto/LocalAI/sources/whisper.cpp
+
+replace github.com/ggerganov/whisper.cpp/bindings/go => /home/teto/LocalAI/sources/whisper.cpp/bindings/go
+
+replace github.com/go-skynet/go-bert.cpp => /home/teto/LocalAI/sources/go-bert
+
+replace github.com/M0Rf30/go-tiny-dream => /home/teto/LocalAI/sources/go-tiny-dream
+
+replace github.com/mudler/go-piper => /home/teto/LocalAI/sources/go-piper
+
+replace github.com/mudler/go-stable-diffusion => /home/teto/LocalAI/sources/go-stable-diffusion
+
+replace github.com/nomic-ai/gpt4all/gpt4all-bindings/golang => /home/teto/LocalAI/sources/gpt4all/gpt4all-bindings/golang
