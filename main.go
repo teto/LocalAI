@@ -67,6 +67,17 @@ func main() {
 				Name:    "debug",
 				EnvVars: []string{"DEBUG"},
 			},
+			&cli.StringFlag{
+				Name:    "log-level",
+				Usage:   "Set log level",
+				EnvVars: []string{"LOCALAI_LOGLEVEL"},
+				Action: func(ctx *cli.Context, v string) error {
+					if v != "info" {
+						return fmt.Errorf("Wrong log level %s", v)
+					}
+					return nil
+				},
+			},
 			&cli.BoolFlag{
 				Name:    "single-active-backend",
 				EnvVars: []string{"SINGLE_ACTIVE_BACKEND"},
@@ -547,6 +558,7 @@ For a list of compatible model, check out: https://localai.io/model-compatibilit
 		},
 	}
 
+	zerolog.SetGlobalLevel(zerolog.DebugLevel)
 	err = app.Run(os.Args)
 	if err != nil {
 		log.Error().Msgf("error: %s", err.Error())
